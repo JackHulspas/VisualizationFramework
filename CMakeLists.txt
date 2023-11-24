@@ -41,6 +41,10 @@ add_definitions( # g++ -Dxxx
 	-D_CRT_SECURE_NO_WARNINGS
 )
 
+include_directories(
+	.
+)
+
 link_directories( # g++ -Lpath/to/library
 
 )

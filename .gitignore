@@ -36,3 +36,4 @@ build
 
 # Visual studio
 .vs
+.vscode
