@@ -50,9 +50,10 @@ add_library(glad
 	external/glad/include/KHR/khrplatform.h
 )
 
-include_directories(
+include_directories( # g++ -Ipath/to/headerfiles
 	external/glfw-3.3.8/include/
 	external/glad/include/
+	external/glm-0.9.9.2/
 	.
 )
 
