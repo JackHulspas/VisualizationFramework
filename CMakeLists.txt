@@ -44,8 +44,15 @@ add_definitions( # g++ -Dxxx
 # Compile external dependencies
 add_subdirectory(external)
 
+add_library(glad
+	external/glad/src/glad.c
+	external/glad/include/glad/glad.h
+	external/glad/include/KHR/khrplatform.h
+)
+
 include_directories(
 	external/glfw-3.3.8/include/
+	external/glad/include/
 	.
 )
 
@@ -56,7 +63,7 @@ link_directories( # g++ -Lpath/to/library
 set(ALL_GRAPHICS_LIBS
 	${OPENGL_LIBRARY}
 	glfw
-	#GLEW_190
+	glad
 )
 
 # MyFramework (libvisualizationFramework.a)
