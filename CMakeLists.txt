@@ -41,7 +41,11 @@ add_definitions( # g++ -Dxxx
 	-D_CRT_SECURE_NO_WARNINGS
 )
 
+# Compile external dependencies
+add_subdirectory(external)
+
 include_directories(
+	external/glfw-3.3.8/include/
 	.
 )
 
@@ -51,7 +55,7 @@ link_directories( # g++ -Lpath/to/library
 
 set(ALL_GRAPHICS_LIBS
 	${OPENGL_LIBRARY}
-	#glfw
+	glfw
 	#GLEW_190
 )
 
