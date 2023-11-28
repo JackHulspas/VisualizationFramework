@@ -11,3 +11,10 @@ The framework will be designed with a logical and expandable structure.
 ![FrameworkUMLDiagram](https://github.com/JackHulspas/VisualizationFramework/assets/136746358/7cec2ab7-1aca-4b89-b7eb-583a5f821a99)
 
 The 3D visualization framework is designed to be used with Windows and Linux.
+
+# Documentation
+To generate the documentation for the framework, run doxygen (with Doxyfile as input) in the root directory of this project:
+``` doxygen Doxyfile ```
+Afterwards, open documentation.html in the doc directory
+
+Within the docs directory you cal also find both the DOCX and PDF files for the project documents
