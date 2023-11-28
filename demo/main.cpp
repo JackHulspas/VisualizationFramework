@@ -31,9 +31,20 @@ int main(void)
     glViewport(0, 0, 800, 600);
 
     while(!glfwWindowShouldClose(window)) {
+        //Process input
+        if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+            glfwSetWindowShouldClose(window, true);
+
+        //Rendering commands
+        glClearColor(0.5f, 0.5f, 1.0f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        //Swap buffers and poll events
         glfwSwapBuffers(window);
         glfwPollEvents();    
     }
+
+    glfwTerminate();
 
     return 0;
 }
