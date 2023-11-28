@@ -71,6 +71,8 @@ set(ALL_GRAPHICS_LIBS
 add_library(visualizationFramework # ar rcs libvisualizationFramework.a
 	visualizationFramework/runner.h
 	visualizationFramework/runner.cpp
+	visualizationFramework/renderer.h
+	visualizationFramework/renderer.cpp
 )
 
 # Main

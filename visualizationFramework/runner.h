@@ -19,8 +19,9 @@
 #include <fstream>
 #include <iostream>
 
-class Runner
-{
+#include <visualizationFramework/renderer.h>
+
+class Runner {
 	public:
 		///@brief Constructor of the Runner.
 		Runner();
@@ -28,7 +29,16 @@ class Runner
 		///@brief Constructor of the Runner.
 		virtual ~Runner();
 
+		///@brief Runs the specified scene.
+		///@return void
+		void run();
+
+		///@brief Gets the renderer.
+		///@return Renderer* renderer
+		Renderer* getRenderer() { return renderer; }
+
 	private:
+		Renderer* renderer;
 };
 
 #endif /* RUNNER_H */
